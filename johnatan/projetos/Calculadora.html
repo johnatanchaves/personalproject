@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.fundo{
+    background-image: linear-gradient(45deg, black, crimson);
+height: 100dvh;
+color: white;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.calculadora{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color:rgba(0, 0, 0, 0.8);
+    transform: translate(-50%,-50%);
+    border-radius: 15%;
+    padding:15px;
+    }
+.botao{
+width: 50px;
+height: 50px;
+border-bottom: 25px;
+font-size: 25px;
+border-radius: 15%;
+cursor: pointer;
+background-color: rgb(31, 31, 31);
+color: white;
+margin: 3px;
+
+}
+.botao:hover{
+    background-color: rgb(11, 1, 1);
+    color: rgb(237, 236, 236);
+}
+#resultado{
+height: 30px;
+width: 207;
+background-color: rgb(255, 255, 255);
+margin: 3px;
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+color: rgb(0, 0, 0);
+font-size: 30px;
+text-align: right;
+padding: 5px;
+
+
+
+}
+</style>
+
+<body>
+    <div class="fundo">
+        <h1>Johnatan Chaves</h1>
+        <div class="calculadora">
+        <h1>calculadora</h1>
+        <p id="resultado"></p>
+        <table>
+         <tr>
+                <td><button class="botao" onclick="clean()">C</button></td>
+                <td><button class="botao" onclick="back()"><</button></td>
+                <td><button class="botao" onclick="cleane('/')">/</button></td>
+                <td><button class="botao" onclick="cleane('*')">X</button></td>
+        </tr>
+            
+        <tr>
+                <td><button class="botao" onclick="cleane('7')">7</button></td>
+                <td><button class="botao" onclick="cleane('8')">8</button></td>
+                <td><button class="botao" onclick="cleane('9')">9</button></td>
+                <td><button class="botao" onclick="cleane('-')">-</button></td>
+        </tr>
+        <tr>
+                <td><button class="botao" onclick="cleane('4')">4</button></td>
+                <td><button class="botao" onclick="cleane('5')">5</button></td>
+                <td><button class="botao" onclick="cleane('6')">6</button></td>
+                <td><button class="botao" onclick="cleane('+')">+</button></td>
+        </tr>
+        <tr>
+                <td><button class="botao" onclick="cleane('1')">1</button></td>
+                <td><button class="botao" onclick="cleane('2')">2</button></td>
+                <td><button class="botao" onclick="cleane('3')">3</button></td>
+                <td rowspan="2"><button class="botao" style="height: 106px;" onclick="calcular()">=</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button class="botao" style="width: 106px;" onclick="cleane('0')">0</button></td>
+                <td><button class="botao" onclick="cleane('.')">.</button></td>
+        </tr>
+     
+    </table>
+    </div> 
+    <script>
+function cleane(num)
+{
+ var numero = document.getElementById('resultado').innerHTML;
+document.getElementById('resultado').innerHTML = numero + num;
+}
+
+function clean()
+{
+document.getElementById('resultado').innerHTML = "";
+}
+
+function back()
+
+{
+    var resultado = document.getElementById('resultado').innerHTML;
+document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);
+}
+
+function calcular() 
+{
+var resultado = document.getElementById('resultado').innerHTML;
+if(resultado) 
+
+{
+    document.getElementById('resultado').innerHTML = eval(resultado);
+}
+    else
+
+{
+document.getElementById('resultado').innerHTML = "nada..."
+  
+}
+
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project</title>
+<style>
+     @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+    *{
+        padding-bottom: 0;
+        margin: 0;
+        text-decoration: none;
+        box-sizing: none;
+    }
+    
+    body{
+background-color: black;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+    header{
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+header h1{
+    color: #dc3545;
+    font-size: 2.5rem;
+    font-family: 'Berkshire Swash', cursive;
+}
+
+/* CARDS MEUS PROJETOS */
+
+
+.my_project{
+    padding: 60px;
+color: white;
+}
+
+.my_project ul{
+    flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;  
+}
+ 
+.my_project ul li{
+    cursor: pointer;
+    position: relative;
+    padding: 60px;
+    display: grid;
+    gap: 30px;
+    text-align: center;
+    max-width: 150;
+    background-color: #222;
+    border-radius: 6px;
+    height: 200px;
+    font-size: 2.2rem;
+    align-content: center;
+}
+
+.my_project ul li i{
+    font-size: 3.7rem;
+    color: #dc3545;
+    width: 150px;
+}
+.my_project ul li h3{
+    color: #fff;
+    font-size: 1.6rem;
+    font-family: 'poppins';
+    font-weight: 400px;
+}
+
+.my_project ul li p{
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 150px;
+    color: #707070;
+}
+
+.my_project ul li p:hover{
+    color: #dc3545;
+}
+
+
+.my_project ul li i:hover{
+    color: #707070;
+}
+
+.my_project li::before{
+    content:'';
+    transition: .5s ease-in-out ;
+    border-radius: 6px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+
+.my_project li::after{
+    content:'';
+    border-radius:6px;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top:-2px;
+    right: -2px;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+}
+
+.my_project li:hover::before{
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid red;
+    border-right: 2px solid red;
+}
+
+.my_project li:hover::after{
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid red;
+    border-left: 2px solid red;
+}
+
+</style>
+</head>
+<body>
+    <header>
+      <h1>My Project</h1>  
+    </header>
+    <div class="my_project">
+        <ul aria-label="navegação primaria">
+                <a href="projetos/bancodedados.html" title="clique aqui para ver projeto" target="_blank" rel="external"> <li>
+                   <i class="fa-brands fa-html5"></i>
+                   <h3>Progeto 01</h3>
+                   <p>login de usuario HTML e CSS</p>
+                 </li></a>
+                <a href="projetos/Calculadora.html" title="clique aqui para ver projeto" target="_blank" rel="external">  <li>  <i class="fa-brands fa-css3-alt"></i>
+                    <h3>Projeto 02</h3>
+                  <p>Calculadora HTML, CSS E JavaScript</p>
+                 </li></a>
+                 <li>
+                    <i class="fa-brands fa-js"></i>
+                    <h3>Embreve</h3>
+                    <p>descrição do projeto</p>
+                 </li>
+                 <li>
+                 <i class="fa-solid fa-mug-saucer"></i> 
+                  <h3>Embreve</h3>
+                  <p>descrição do projeto</p>
+                 </li>
+        </ul>
+     </div>
+</body>
+</html>
