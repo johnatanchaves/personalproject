@@ -111,13 +111,13 @@ header .navegacao-primaria li a:hover{
      .section-div div a {
         justify-self: none;
         color: white;
-        padding: 15px 40px;
+        padding: 15px 20px;
         border-radius: 5px;
         border: 2px solid white;
      }
      .section-div div a i{
         font-size: 40px;
-        padding-left: 120px ;
+        padding-left: 210px
      }
      .section-div div a i:hover{
      color: #dc3545;
